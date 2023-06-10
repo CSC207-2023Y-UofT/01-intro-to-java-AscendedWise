@@ -159,9 +159,13 @@ public class Basics {
     public static int oddSum(int[] arr) {
         int current_sum = 0;
 
-        for (int i: arr) {
-            if (i % 2 != 0) {
-                current_sum += i;
+        if (arr.length <= 1) {
+            return current_sum;
+        } else {
+            for (int i: arr) {
+                if (i % 2 != 0) {
+                    current_sum += i;
+                }
             }
         }
 
