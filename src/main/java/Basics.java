@@ -128,16 +128,12 @@ public class Basics {
      * @return           The first letter of every word in to_split
      */
     public static String split(String to_split) {
-        /* TODO (Task 4): Complete this method body.
-         *                The String methods .split and .charAt may be helpful,
-         *                along with the StringBuilder.append
-         *                You may also assume that to_split always has 7 words
-         *                separated by spaces, so no loops are required, though
-         *                you may use them if you wish.
-         */
+
         StringBuilder ret = new StringBuilder();
 
-
+        for (String s : to_split.split(" ")) {
+            ret.append(s.charAt(0));
+        }
 
         return ret.toString();
     }
@@ -158,13 +154,17 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
+        boolean add_switch = false;
 
         if (arr.length <= 1) {
             return current_sum;
         } else {
             for (int i: arr) {
-                if (i % 2 != 0) {
+                if (add_switch) {
                     current_sum += i;
+                    add_switch = false;
+                } else {
+                    add_switch = true;
                 }
             }
         }
