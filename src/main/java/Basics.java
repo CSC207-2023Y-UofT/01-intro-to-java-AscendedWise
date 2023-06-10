@@ -1,7 +1,7 @@
 /**
  * This file contains a few exercises to familiarize you with Java.
  * You should read this file from top-to-bottom. Any tasks you are to complete
- * are labelled with TODO
+ * are labelled with
  *
  * For your convenience, we have also included references to the
  * relevant readings for each task.
@@ -92,7 +92,7 @@ public class Basics {
          */
 
         for (int i = 10; i >= 0; i--){
-            System.out.println("current count: " + i);
+            System.out.println("Current count: " + i);
 
         }
 
